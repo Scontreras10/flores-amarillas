@@ -1,0 +1,40 @@
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.flower {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: relative;
+}
+
+.flower::before, .flower::after {
+    content: '';
+    position: absolute;
+    background-color: yellow;
+}
+
+.flower::before {
+    width: 20px;
+    height: 100px;
+    left: 40px;
+    top: -10px;
+    border-radius: 10px;
+    transform: rotate(45deg);
+}
+
+.flower::after {
+    width: 20px;
+    height: 100px;
+    left: 40px;
+    top: -10px;
+    border-radius: 10px;
+    transform: rotate(-45deg);
+}
