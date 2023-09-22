@@ -10,31 +10,29 @@ body {
 .flower {
     width: 100px;
     height: 100px;
-    background-color: yellow;
-    border-radius: 50%;
     position: relative;
 }
 
-.flower::before, .flower::after {
-    content: '';
-    position: absolute;
-    background-color: yellow;
-}
-
-.flower::before {
-    width: 20px;
+.petal {
+    width: 40px;
     height: 100px;
-    left: 40px;
-    top: -10px;
-    border-radius: 10px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
     transform: rotate(45deg);
 }
 
-.flower::after {
-    width: 20px;
-    height: 100px;
-    left: 40px;
-    top: -10px;
-    border-radius: 10px;
-    transform: rotate(-45deg);
+.petal:nth-child(2) {
+    transform: rotate(135deg);
 }
+
+.center {
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
